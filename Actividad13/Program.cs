@@ -1,4 +1,5 @@
-﻿bool continuar = false;
+﻿Dispositivo dispositivos = new Dispositivo();
+bool continuar = false;
 int cantidad;
 do
 {
@@ -15,7 +16,7 @@ do
     }
 
 } while (continuar==false);
-class Dispositivos
+class Dispositivo
 {
     public string nombre;
     public double rendimiento1;
