@@ -38,6 +38,8 @@ do
                 mejor = d;
             }
         }
+        Console.WriteLine($"Promedio total de rendimientos de todos los dispositivos: {promedioTotal/dispositivos.Count:F2}");
+        Console.WriteLine($"El dispositivo con el mejor promedio de rendimiento es el dispositivo {mejor.nombre}");
     }
 
 } while (continuar==false);
