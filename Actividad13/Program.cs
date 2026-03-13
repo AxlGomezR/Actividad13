@@ -1,4 +1,21 @@
-﻿class Dispositivos
+﻿bool continuar = false;
+int cantidad;
+do
+{
+    Console.WriteLine("Ingrese la cantidad de dispositivos que registrará");
+    cantidad=int.Parse(Console.ReadLine());
+    Console.Clear();
+    if (cantidad <= 0)
+    {
+        Console.WriteLine("Debe registrar al menos 1 dispositivo");
+    }
+    else
+    {
+        continuar = true;
+    }
+
+} while (continuar==false);
+class Dispositivos
 {
     public string nombre;
     public double rendimiento1;
