@@ -21,9 +21,10 @@ do
             Console.WriteLine($"Dispositivo {i+1}");
             Console.WriteLine("Ingrese el nombre del dispositivo"); d.nombre = Console.ReadLine();
             Console.WriteLine("\nRendimiento 1: "); d.rendimiento1= double.Parse(Console.ReadLine());
-            Console.WriteLine("\nRendimiento 2: "); d.rendimiento2 = double.Parse(Console.ReadLine());
-            Console.WriteLine("\nRendimiento 3: "); d.rendimiento3 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Rendimiento 2: "); d.rendimiento2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Rendimiento 3: "); d.rendimiento3 = double.Parse(Console.ReadLine());
             dispositivos.Add(d);
+            Console.Clear();
         }
         double promedioTotal = 0;
         Dispositivo mejor = dispositivos[0];
@@ -66,6 +67,6 @@ class Dispositivo
         Console.WriteLine($"Nombre: {nombre}");
         Console.WriteLine($"Rendimiento 1: {rendimiento1} | Rendimiento 2: {rendimiento2} | Rendimiento 3: {rendimiento3}");
         Console.WriteLine($"Promedio del rendimiento: {CalcularPromedio()}");
-        Console.WriteLine($"Estado del dispositivo: {EstadoDispositivo()}");
+        Console.WriteLine($"Estado del dispositivo: {EstadoDispositivo()}\n");
     }
 }
