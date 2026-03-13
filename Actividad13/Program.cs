@@ -25,6 +25,18 @@ do
             Console.WriteLine("\nRendimiento 3: "); d.rendimiento3 = double.Parse(Console.ReadLine());
             dispositivos.Add(d);
         }
+        double promedioTotal = 0;
+        Dispositivo mejor = dispositivos[0];
+        Console.WriteLine("Dispositivos Ingresados:\n");
+        foreach(Dispositivo d in dispositivos)
+        {
+            d.MostrarInfo();
+            promedioTotal += d.CalcularPromedio();
+            if (d.CalcularPromedio() > mejor.CalcularPromedio())
+            {
+                mejor = d;
+            }
+        }
     }
 
 } while (continuar==false);
