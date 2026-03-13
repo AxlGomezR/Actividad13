@@ -1,4 +1,6 @@
-﻿Dispositivo dispositivos = new Dispositivo();
+﻿using System;
+using System.Collections.Generic;   
+List<Dispositivo> dispositivos = new List<Dispositivo>();
 bool continuar = false;
 int cantidad;
 do
@@ -13,6 +15,16 @@ do
     else
     {
         continuar = true;
+        for(int i =0; i<cantidad; i++)
+        {
+            Dispositivo d = new Dispositivo();
+            Console.WriteLine($"Dispositivo {i+1}");
+            Console.WriteLine("Ingrese el nombre del dispositivo"); d.nombre = Console.ReadLine();
+            Console.WriteLine("\nRendimiento 1: "); d.rendimiento1= double.Parse(Console.ReadLine());
+            Console.WriteLine("\nRendimiento 2: "); d.rendimiento2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("\nRendimiento 3: "); d.rendimiento3 = double.Parse(Console.ReadLine());
+            dispositivos.Add(d);
+        }
     }
 
 } while (continuar==false);
